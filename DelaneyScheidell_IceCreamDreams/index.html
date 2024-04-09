@@ -10,54 +10,56 @@
 
   <!-- NAVBAR -->
   <nav>
+    <img src="images/Ice_Cream_Dreams.png" alt="logo">
     <ul>
-      <img src="images/">
       <li><a href="featuredFlavors.html"> Featured Flavors</a></li>
       <li><a href="locations.html"> Locations</a></li>
       <li><a href="orderOline.html"> Order Online</a></li>
     </ul>
   </nav>
 
+
   <!-- Ice Sream Dreams Section -->
-  <section1>
-    <img src="images/">
+  <section>
+    <img src="images/Ice_Cream_Dreams.png" alt="logo">
     <h1>Ice Cream Dreams</h1>
-  </section1>
+  </section>
+
+
 
   <!-- Feature Flavors Section -->
-  <section2>
+  <section>
     <h2>Featured Flavors</h2>
 
     <div class="iceCreamImage">
-      <img src="images/superman.jpg">
+      <img src="images/superman.jpg" alt="superman">
       <p>Superman</p>
     </div>
 
     <div class="iceCreamImage">
-      <img src="images/pistachio.jpg">
+      <img src="images/pistachio.jpg" alt="pistachio">
       <p>Pistachio</p>
     </div>
 
     <div class="iceCreamImage">
-      <img src="images/raspberry.jpg">
+      <img src="images/raspberry.jpg" alt="raspberry">
       <p>Raspberry</p>
     </div>
 
     <div class="iceCreamImage">
-      <img src="images/choco-chip.jpg">
+      <img src="images/choco-chip.jpg" alt="chocochip">
       <p>ChocoChip</p>
     </div>
+  </section>
 
 
-  </section2>
 
   <!-- Locations Section -->
-  <section3>
-
+  <section>
     <h2>Locations</h2>
 
     <div class="Orange City">
-      <img src="images/ice-cream-stand-001.jpg">
+      <img src="images/ice-cream-stand-001.jpg" alt="stand01">
       <h3>Orange City</h3>
       <p>1432 Creamsicle Lane</p>
       <p>Orange City, CA 55555</p>
@@ -66,7 +68,7 @@
     </div>
 
     <div class="Sunset Beach">
-      <img src="images/ice-cream-stand-002.jpg">
+      <img src="images/ice-cream-stand-002.jpg" alt="stand02">
       <h3>Sunset Beach</h3>
       <p>1848 Beach Front Drive</p>
       <p>Sunset Beach, CA 55555</p>
@@ -75,7 +77,7 @@
     </div>
 
     <div class="Cultural District">
-      <img src="images/ice-cream-stand-003.jpg">
+      <img src="images/ice-cream-stand-003.jpg" alt="stand03">
       <h3>Cultural District</h3>
       <p>12 Performance Avenue</p>
       <p>New York, NY 55555</p>
@@ -84,40 +86,65 @@
     </div>
 
     <div class="Food Truck">
-      <img src="images/ice-cream-stand-004.jpg">
+      <img src="images/ice-cream-stand-004.jpg" alt="stand04">
       <h3>ICD Food Truck</h3>
       <p>Various Locations</p>
       <p>Pittsburgh, PA</p>
       <p>Check out Facebook for times and locations</p>
     </div>
 
-  </section3>
+  </section>
 
 
-  <section4>
+  <section>
     <h1>Order Online</h1>
 
     <!--Type boxes -->
+    <div class="typeResponses">
+      <form>
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text">
+
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text">
+
+
+        <label for="Email">Email</label>
+        <input id="Email" type="text">
+
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" type="text">
+      </form>
+    </div>
+
 
     <!-- Checkboxes -->
     <div class="checkboxes">
       <p>I would like to order the following flavors:</p>
-      <label>
-        <input type="checkbox" name="whatstrue" value=" Superman">
-        Superman
-      </label>
-      <label>
-        <input type="checkbox" name="whatstrue" value=" Pistachio">
-        Pistachio
-      </label>
-      <label>
-        <input type="checkbox" name="whatstrue" value=" Raspberry">
-        Raspberry
-      </label>
-      <label>
-        <input type="checkbox" name="whatstrue" value=" ChocoChip">
-        ChocoChip
-      </label>
+
+      <ul>
+
+        <li><label for="Superman">Superman</label>
+          <input id="Superman" type="checkbox" name="flavor" value="Superman">
+        </li>
+
+        <li>
+          <label for="Pistachio">Pistachio</label>
+          <input id="Pistachio" type="checkbox" name="flavor" value="Pistachio">
+        </li>
+
+        <li>
+          <label for="Raspberry">Raspberry</label>
+          <input id="Raspberry" type="checkbox" name="flavor" value="Raspberry">
+        </li>
+
+        <li>
+          <label for="ChocoChip">ChocoChip</label>
+          <input id="ChocoChip" type="checkbox" name="flavor" value="ChocoChip">
+        </li>
+
+      </ul>
+
     </div>
 
 
@@ -149,11 +176,11 @@
     </div>
     <!--Submit-->
     <a href="#"> SUBMIT</a>
-  </section4>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2022- Ice Cream Dreams</p>
+  </footer>
 
 </body>
-
-<!-- Footer -->
-<footer>
-  <p>Copyright 2022- Ice Cream Dreams</p>
-</footer>
