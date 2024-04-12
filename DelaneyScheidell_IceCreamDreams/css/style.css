@@ -73,15 +73,51 @@ Ice Cream Dreams Section
 }
 
 .logo-and-text h1 {
-    margin: 0;
     font-family: "Passion One";
-    font-size: 120px;
+    font-size: 150px;
     color: #bc4c4a;
+    margin: 0;
 }
 
 /* -----------------------------------------------------------------
 Featured Flavors Section
 ----------------------------------------------------------------- */
+.featured-flavors-sec {
+    text-align: center;
+    justify-content: center;
+    background-color: #3d7f96;
+    height: 600px;
+    font-family: "Passion One";
+    color: white;
+}
+
+.flavor-container {
+    padding: 1em;
+    display: inline-flex;
+}
+
+.featured-flavors-sec h2 {
+    padding: .25em;
+    font-size: 90px;
+    margin: 0;
+}
+
+.flavor-container div p {
+    margin: 5px;
+    font-size: 35px;
+}
+
+.flavor-container div {
+    padding: .5em;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.flavor-container img {
+    width: 300px;
+    border-radius: 50%;
+    border: 6px solid white;
+}
 
 address {
     padding: 1em 0;
