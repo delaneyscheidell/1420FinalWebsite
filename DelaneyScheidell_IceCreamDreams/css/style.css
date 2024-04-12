@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*CSS RESET for full bleed*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/*padding pushed outside, margin pushes inside*/
+
+.nav-heading {
+    padding: 1em 1em 1em 1em;
+    background-color: #bc4c4a;
+    display: flex;
+}
+
+.burger img {
+    width: 50px;
+    margin-top: 1.25em;
+}
+
+.nav-logo img {
+    width: 75px;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+nav ul {
+    display: none;
+}
+
+/* under the condition that there's a li in a ul in nav */
+nav ul li {
+    display: inline-block;
+    padding-top: 1em;
+    margin: 0 .5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+address {
+    padding: 1em 0;
+    font-style: normal;
+}
+
+address p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*only for non-phone i think*/
+@media only screen and (min-width: 600px) {
+    nav ul {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+}
