@@ -74,58 +74,59 @@
 
 
   <!-- Locations Section -->
-  <section>
+  <section class="locations-section">
     <h2>Locations</h2>
 
-    <div class="Orange City">
-      <img src="images/ice-cream-stand-001.jpg" alt="stand01">
-      <h3>Orange City</h3>
-      <address>
-        <p>1432 Creamsicle Lane</p>
-        <p>Orange City, CA 55555</p>
-      </address>
-      <p>555-867-5309</p>
-      <p>Open noon - 10p.m</p>
-    </div>
+    <section class="locations-container">
+      <div class="Orange City">
+        <img src="images/ice-cream-stand-001.jpg" alt="stand01">
+        <h3>Orange City</h3>
+        <address>
+          <p>1432 Creamsicle Lane</p>
+          <p>Orange City, CA 55555</p>
+        </address>
+        <p>555-867-5309</p>
+        <p>Open noon - 10p.m</p>
+      </div>
 
-    <div class="Sunset Beach">
-      <img src="images/ice-cream-stand-002.jpg" alt="stand02">
-      <h3>Sunset Beach</h3>
+      <div class="Sunset Beach">
+        <img src="images/ice-cream-stand-002.jpg" alt="stand02">
+        <h3>Sunset Beach</h3>
 
-      <address>
-        <p>1848 Beach Front Drive</p>
-        <p>Sunset Beach, CA 55555</p>
-      </address>
+        <address>
+          <p>1848 Beach Front Drive</p>
+          <p>Sunset Beach, CA 55555</p>
+        </address>
 
-      <p>555-867-5309</p>
-      <p>Open 10a.m. - midnight</p>
-    </div>
+        <p>555-867-5309</p>
+        <p>Open 10a.m. - midnight</p>
+      </div>
 
-    <div class="Cultural District">
-      <img src="images/ice-cream-stand-003.jpg" alt="stand03">
-      <h3>Cultural District</h3>
-      <address>
-        <p>12 Performance Avenue</p>
-        <p>New York, NY 55555</p>
-      </address>
+      <div class="Cultural District">
+        <img src="images/ice-cream-stand-003.jpg" alt="stand03">
+        <h3>Cultural District</h3>
+        <address>
+          <p>12 Performance Avenue</p>
+          <p>New York, NY 55555</p>
+        </address>
 
-      <p>555-867-5309</p>
-      <p>Open 4 p.m. - 9 p.m.</p>
-    </div>
+        <p>555-867-5309</p>
+        <p>Open 4 p.m. - 9 p.m.</p>
+      </div>
 
-    <div class="Food Truck">
-      <img src="images/ice-cream-stand-004.jpg" alt="stand04">
-      <h3>ICD Food Truck</h3>
-      <p>Various Locations</p>
-      <p>Pittsburgh, PA</p>
-      <p>Check out Facebook for times and locations</p>
-    </div>
-
+      <div class="Food Truck">
+        <img src="images/ice-cream-stand-004.jpg" alt="stand04">
+        <h3>ICD Food Truck</h3>
+        <p>Various Locations</p>
+        <p>Pittsburgh, PA</p>
+        <p>Check out Facebook for times and locations</p>
+      </div>
+    </section>
   </section>
 
 
-  <section>
-    <h1>Order Online</h1>
+  <section class="order-online-sec">
+    <h2>Order Online</h2>
     <form>
       <!--Type boxes -->
       <div class="typeResponses">
@@ -148,57 +149,65 @@
 
 
       <!-- Checkboxes -->
-      <div class="checkboxes">
+      <div class="checkbox-container">
         <p>I would like to order the following flavors:</p>
+        <div class="checkboxes">
+          <div class="checkbox-grid">
+            <fieldset>
+              <label>
+                <input id="Superman" type="checkbox" name="flavor" value="Superman">
+                Superman
+              </label>
 
-        <fieldset>
-          <li><label for="Superman">Superman</label>
-            <input id="Superman" type="checkbox" name="flavor" value="Superman">
-          </li>
+              <label>
+                <input id="Pistachio" type="checkbox" name="flavor" value="Pistachio">
+                Pistachio
+              </label>
 
-          <li>
-            <label for="Pistachio">Pistachio</label>
-            <input id="Pistachio" type="checkbox" name="flavor" value="Pistachio">
-          </li>
-          <br>
-          <li>
-            <label for="Raspberry">Raspberry</label>
-            <input id="Raspberry" type="checkbox" name="flavor" value="Raspberry">
-          </li>
+              <label>
+                <input id="Raspberry" type="checkbox" name="flavor" value="Raspberry">
+                Raspberry
+              </label>
 
-          <li>
-            <label for="ChocoChip">ChocoChip</label>
-            <input id="ChocoChip" type="checkbox" name="flavor" value="ChocoChip">
-          </li>
-        </fieldset>
-
+              <label>
+                <input id="ChocoChip" type="checkbox" name="flavor" value="ChocoChip">
+                ChocoChip
+              </label>
+            </fieldset>
+          </div>
+        </div>
       </div>
 
 
       <!-- pickup date and location -->
       <div class="dropdowns">
-        <label>
-          Pickup Date
-          <select name="Pickup Day">
-            <option value="Monday"> Monday</option>
-            <option value="Tuesday"> Tuesday</option>
-            <option value="Wednesday"> Wednesday</option>
-            <option value="Thursday"> Thursday</option>
-            <option value="Friday"> Friday</option>
-            <option value="Saturday"> Saturday</option>
-            <option value="Sunday"> Sunday</option>
-          </select>
-        </label>
+        <div class="dropdown-container">
+          <label for="pickup-day">Pickup Date</label>
+          <div class="select-wrapper">
+            <select name="Pickup Day" id="pickup-day" class="dropdown">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </div>
+        </div>
 
-        <label>
-          Pickup Location
-          <select name="Pickup Location">
-            <option value="Orange City"> Orange City</option>
-            <option value="Sunset Beach"> Sunset Beach</option>
-            <option value="Cultural Distrcit"> Cultural District</option>
-          </select>
-        </label>
+        <div class="dropdown-container">
+          <label for="pickup-location">Pickup Location</label>
+          <div class="select-wrapper">
+            <select name="Pickup Location" id="pickup-location" class="dropdown">
+              <option value="Orange City">Orange City</option>
+              <option value="Sunset Beach">Sunset Beach</option>
+              <option value="Cultural District">Cultural District</option>
+            </select>
+          </div>
+        </div>
       </div>
+
 
       <!--Submit-->
       <a href="#"> SUBMIT</a>
@@ -207,7 +216,9 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Copyright 2022- Ice Cream Dreams</p>
+    <section class="footer-sec">
+      <p>&copy; Copyright 2022- Ice Cream Dreams</p>
+    </section>
   </footer>
 
 </body>

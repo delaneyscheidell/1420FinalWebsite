@@ -8,6 +8,11 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+body h2 {
+    font-size: 90px;
+    padding-top: .5em;
+}
+
 /*padding pushed outside, margin pushes inside*/
 
 .nav-heading {
@@ -93,12 +98,13 @@ Featured Flavors Section
 
 .flavor-container {
     padding: 1em;
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .featured-flavors-sec h2 {
     padding: .25em;
-    font-size: 90px;
     margin: 0;
 }
 
@@ -113,21 +119,166 @@ Featured Flavors Section
     padding-right: 80px;
 }
 
+/*not sure if it should be adaptive?*/
 .flavor-container img {
+    max-width: 100%;
     width: 300px;
     border-radius: 50%;
     border: 6px solid white;
 }
 
-address {
-    padding: 1em 0;
+/* -----------------------------------------------------------------
+Locations Section
+----------------------------------------------------------------- */
+.locations-section {
+    text-align: center;
+    font-family: "Passion One";
+    justify-content: center;
+    height: 800px;
+    background-color: #fafce7
+}
+
+.locations-section h2 {
+    margin: 0;
+    color: #bc4c4a;
+}
+
+.locations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+    padding: 20px;
+}
+
+.locations-container div {
+    max-width: max-content;
+    margin: 1em 1em;
+    border: 6px solid #bc4c4a;
+    flex-direction: column;
+}
+
+.locations-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.locations-container h3 {
+    text-align: left;
+    padding: .5em .5em;
+    font-size: 25px;
+    color: white;
+    background-color: #bc4c4a;
+    margin: 0;
+}
+
+.locations-container p {
+    text-align: left;
+    padding: .5em .5em;
+    font-family: Roboto;
+}
+
+.locations-container address {
+    padding: 1em .5em;
     font-style: normal;
 }
 
-address p {
+.locations-container address p {
     margin: 0;
     padding: 0;
 }
+
+.footer-sec {
+    height: 150px;
+    text-align: center;
+    font-family: Roboto;
+    color: white;
+    background-color: #3d7f96;
+}
+
+
+
+/* -----------------------------------------------------------------
+Order Online
+----------------------------------------------------------------- */
+
+.order-online-sec {
+    text-align: center;
+    justify-content: center;
+    font-family: "Roboto";
+    color: white;
+    justify-content: center;
+    height: 1000px;
+    background-color: #bc4c4a;
+}
+
+
+.order-online-sec h2 {
+    font-family: "Passion One";
+    margin: 0;
+}
+
+
+.order-online-sec {
+    text-align: center;
+    font-family: "Roboto";
+}
+
+.checkbox-container {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.checkbox-grid fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    margin: 1em 1em;
+    width: 3em;
+    background-color: white;
+}
+
+.dropdowns {
+    display: flex;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdowns label {
+    text-align: left;
+}
+
+.dropdowns select {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.select-wrapper {
+    margin: 20px;
+}
+
+
+
+
+
 
 
 /*only for non-phone i think*/
