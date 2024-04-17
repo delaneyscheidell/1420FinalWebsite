@@ -100,7 +100,7 @@ Featured Flavors Section
     padding: 1em;
     /* display: inline-flex; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
 }
 
 .featured-flavors-sec h2 {
@@ -187,14 +187,6 @@ Locations Section
     padding: 0;
 }
 
-.footer-sec {
-    height: 150px;
-    text-align: center;
-    font-family: Roboto;
-    color: white;
-    background-color: #3d7f96;
-}
-
 
 
 /* -----------------------------------------------------------------
@@ -223,6 +215,17 @@ Order Online
     font-family: "Roboto";
 }
 
+/* -----------------------------------------------------------------
+Type Responses
+----------------------------------------------------------------- */
+.typeResponses {
+    padding: 5em;
+}
+
+/* -----------------------------------------------------------------
+Checkboxes
+----------------------------------------------------------------- */
+
 .checkbox-container {
     text-align: left;
     max-width: 400px;
@@ -233,35 +236,39 @@ Order Online
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border: none;
-    margin: 0 auto;
-    max-width: 400px;
 }
 
 .checkbox-grid label {
     display: flex;
     align-items: center;
-    text-align: center;
-    margin-right: 100px;
 }
 
 .checkbox-grid input[type="checkbox"] {
     margin: 1em 1em;
-    width: 3em;
+    width: 4em;
     background-color: white;
 }
 
+/* -----------------------------------------------------------------
+Dropdown Select
+----------------------------------------------------------------- */
 .dropdowns {
     display: flex;
+    justify-content: center;
+    padding: 5em;
 }
 
 .dropdown-container {
     display: flex;
     flex-direction: column;
+    margin: 0 20px;
 }
 
 .dropdowns label {
     text-align: left;
+    margin-bottom: 5px;
 }
+
 
 .dropdowns select {
     border: none;
@@ -275,14 +282,48 @@ Order Online
     margin: 20px;
 }
 
+/* -----------------------------------------------------------------
+Button
+----------------------------------------------------------------- */
+
+.submit-button {
+    background-color: white;
+    color: #bc4c4a;
+    border-radius: 5px;
+    border: none;
+    padding: 1em 3em;
+}
+
+
+/* -----------------------------------------------------------------
+Footer
+----------------------------------------------------------------- */
+.footer-sec {
+    height: 150px;
+    text-align: center;
+    font-family: Roboto;
+    color: white;
+    background-color: #3d7f96;
+}
+
+.footer-sec p {
+    margin: 0;
+}
 
 
 
 
 
 
-/*only for non-phone i think*/
-@media only screen and (min-width: 600px) {
+
+/*adapting it for a phone screen now*/
+/*
+featured flavors should become a grid of 4
+location cards show appear in a column of four
+typebox forms should be one on top of the other
+checkboxes should also be one on top of the other
+*/
+@media only screen and (max-width: 768px) {
     nav ul {
         display: block;
     }
@@ -290,4 +331,27 @@ Order Online
     .burger {
         display: none;
     }
+
+    /*update section sizes*/
+    .featured-flavors-sec {
+        height: 800px;
+    }
+
+    .locations-section {
+        height: 2500px;
+    }
+
+    .flavor-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /*make the location cards stack on top of one anotehr*/
+    .locations-container {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
