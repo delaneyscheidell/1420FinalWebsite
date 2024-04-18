@@ -29,6 +29,9 @@
   </header>
 
 
+
+
+
   <!-- Ice Cream Dreams Section -->
   <section class="ice-cream-dreams-sec">
 
@@ -131,18 +134,24 @@
       <!--Type boxes -->
       <div class="typeResponses">
         <form>
-          <label for="firstName">First Name</label>
-          <input id="firstName" type="text">
+          <div class="question">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text">
+          </div>
 
-          <label for="lastName">Last Name</label>
-          <input id="lastName" type="text">
+          <div class="question">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text">
+          </div>
 
-          <br>
-          <label for="Email">Email</label>
-          <input id="Email" type="text">
-
-          <label for="phoneNumber">Phone Number</label>
-          <input id="phoneNumber" type="text">
+          <div class="question">
+            <label for="Email">Email</label>
+            <input id="Email" type="text">
+          </div>
+          <div class="question">
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" type="text">
+          </div>
         </form>
       </div>
 
@@ -151,36 +160,44 @@
       <!-- Checkboxes -->
       <div class="checkbox-container">
         <p>I would like to order the following flavors:</p>
-        <div class="checkboxes">
-          <div class="checkbox-grid">
-            <fieldset>
-              <label>
-                <input id="Superman" type="checkbox" name="flavor" value="Superman">
-                Superman
-              </label>
+        <fieldset class="checkbox-grid">
+          <div class="checkbox-item">
+            <label>
+              <input id="Superman" type="checkbox" name="flavor" value="Superman">
+              Superman
+            </label>
 
-              <label>
-                <input id="Pistachio" type="checkbox" name="flavor" value="Pistachio">
-                Pistachio
-              </label>
-
-              <label>
-                <input id="Raspberry" type="checkbox" name="flavor" value="Raspberry">
-                Raspberry
-              </label>
-
-              <label>
-                <input id="ChocoChip" type="checkbox" name="flavor" value="ChocoChip">
-                ChocoChip
-              </label>
-            </fieldset>
           </div>
-        </div>
+
+          <div class="checkbox-item">
+            <label>
+              <input id="Pistachio" type="checkbox" name="flavor" value="Pistachio">
+              Pistachio
+            </label>
+
+          </div>
+
+          <div class="checkbox-item">
+            <label>
+              <input id="Raspberry" type="checkbox" name="flavor" value="Raspberry">
+              Raspberry
+            </label>
+
+          </div>
+
+          <div class="checkbox-item">
+            <label>
+              <input id="ChocoChip" type="checkbox" name="flavor" value="ChocoChip">
+              ChocoChip
+            </label>
+          </div>
+        </fieldset>
       </div>
 
 
       <!-- pickup date and location -->
       <div class="dropdowns">
+
         <div class="dropdown-container">
           <label for="pickup-day">Pickup Date</label>
           <div class="select-wrapper">
@@ -196,6 +213,7 @@
           </div>
         </div>
 
+
         <div class="dropdown-container">
           <label for="pickup-location">Pickup Location</label>
           <div class="select-wrapper">
@@ -208,9 +226,10 @@
         </div>
       </div>
 
-
       <!--Submit-->
-      <button type="submit" class="submit-button">SUBMIT</button>
+      <div class="submit-section">
+        <button type="submit" class="submit-button">SUBMIT</button>
+      </div>
     </form>
   </section>
 

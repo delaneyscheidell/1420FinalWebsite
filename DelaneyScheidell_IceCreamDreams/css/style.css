@@ -13,6 +13,10 @@ body h2 {
     padding-top: .5em;
 }
 
+/* -----------------------------------------------------------------
+Navigation Bar 
+----------------------------------------------------------------- */
+
 /*padding pushed outside, margin pushes inside*/
 
 .nav-heading {
@@ -21,9 +25,9 @@ body h2 {
     display: flex;
 }
 
-.burger img {
-    width: 50px;
-    margin-top: 1.25em;
+
+.burger {
+    display: none;
 }
 
 .nav-logo img {
@@ -36,10 +40,10 @@ nav {
 }
 
 nav ul {
-    display: none;
+    display: block;
 }
 
-/* under the condition that there's a li in a ul in nav */
+/* "under the condition that there's a li in a ul in nav" */
 nav ul li {
     display: inline-block;
     padding-top: 1em;
@@ -63,25 +67,27 @@ Ice Cream Dreams Section
 .ice-cream-dreams-sec {
     display: flex;
     justify-content: center;
-    height: 500px;
+    height: auto;
     background-color: #fafce7;
 }
 
 .logo-and-text {
     display: flex;
     align-items: center;
+    margin: 8em;
 }
 
 .large-logo img {
-    width: 300px;
+    width: 200px;
     margin-right: 1em;
 }
 
 .logo-and-text h1 {
     font-family: "Passion One";
-    font-size: 150px;
+    font-size: 120px;
     color: #bc4c4a;
     margin: 0;
+    /* white-space: nowrap; */
 }
 
 /* -----------------------------------------------------------------
@@ -89,23 +95,24 @@ Featured Flavors Section
 ----------------------------------------------------------------- */
 .featured-flavors-sec {
     text-align: center;
-    justify-content: center;
     background-color: #3d7f96;
-    height: 600px;
+    height: auto;
     font-family: "Passion One";
     color: white;
 }
 
 .flavor-container {
-    padding: 1em;
-    /* display: inline-flex; */
+    padding: 5em;
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
 }
 
 .featured-flavors-sec h2 {
-    padding: .25em;
     margin: 0;
+    padding: 0em, 1em;
 }
 
 .flavor-container div p {
@@ -113,16 +120,14 @@ Featured Flavors Section
     font-size: 35px;
 }
 
-.flavor-container div {
-    padding: .5em;
-    padding-left: 80px;
-    padding-right: 80px;
-}
+/* .flavor-container div {
+    padding: 0em 2em;
+} */
 
 /*not sure if it should be adaptive?*/
 .flavor-container img {
-    max-width: 100%;
-    width: 300px;
+    flex: 1;
+    width: 60%;
     border-radius: 50%;
     border: 6px solid white;
 }
@@ -131,35 +136,41 @@ Featured Flavors Section
 Locations Section
 ----------------------------------------------------------------- */
 .locations-section {
+    background-color: #fafce7;
     text-align: center;
     font-family: "Passion One";
     justify-content: center;
-    height: 800px;
-    background-color: #fafce7
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .locations-section h2 {
-    margin: 0;
     color: #bc4c4a;
+    margin: 0;
 }
 
 .locations-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 50px;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    /*trying it as a flex*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 3em 0em;
 }
 
 .locations-container div {
-    max-width: max-content;
-    margin: 1em 1em;
+    margin: 1em 2em;
     border: 6px solid #bc4c4a;
     flex-direction: column;
+    width: 300px;
 }
 
 .locations-container img {
-    max-width: 100%;
-    height: auto;
+    flex: 1;
+    width: 100%;
+    display: block;
 }
 
 .locations-container h3 {
@@ -199,8 +210,9 @@ Order Online
     font-family: "Roboto";
     color: white;
     justify-content: center;
-    height: 1000px;
+    height: auto;
     background-color: #bc4c4a;
+    padding: 2em;
 }
 
 
@@ -215,76 +227,134 @@ Order Online
     font-family: "Roboto";
 }
 
+
 /* -----------------------------------------------------------------
 Type Responses
 ----------------------------------------------------------------- */
-.typeResponses {
-    padding: 5em;
+.form {
+    display: flex;
+    justify-content: center;
 }
+
+.typeResponses {
+    padding: 5em 0em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    max-width: 600px;
+    margin: auto;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+}
+
+.question label {
+    margin-bottom: 1em;
+    align-self: flex-start;
+}
+
+.typeResponses input[type="text"] {
+    height: 35px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 0.5em;
+}
+
 
 /* -----------------------------------------------------------------
 Checkboxes
 ----------------------------------------------------------------- */
+fieldset {
+    border-style: none;
+}
+
 
 .checkbox-container {
-    text-align: left;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
+    /* padding: 2em; */
+    justify-content: center;
 }
 
-.checkbox-grid fieldset {
+.checkbox-container p {
+    display: flex;
+    text-align: left;
+    /* padding: 10px; */
+}
+
+
+.checkbox-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: none;
+    grid-gap: 2em;
 }
 
-.checkbox-grid label {
+.checkbox-item {
     display: flex;
     align-items: center;
 }
 
-.checkbox-grid input[type="checkbox"] {
-    margin: 1em 1em;
-    width: 4em;
-    background-color: white;
+
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 0.5em;
+    flex: 0 0 auto;
+
 }
+
+
+
 
 /* -----------------------------------------------------------------
 Dropdown Select
 ----------------------------------------------------------------- */
+
+
 .dropdowns {
+    padding: 5em 0em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+    max-width: 600px;
+    margin: auto;
+}
+
+.select-wrapper {
     display: flex;
-    justify-content: center;
-    padding: 5em;
+    flex-direction: column;
 }
 
 .dropdown-container {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
 }
 
-.dropdowns label {
-    text-align: left;
-    margin-bottom: 5px;
+.dropdown-container label {
+    margin-bottom: 1em;
+    align-self: flex-start;
 }
 
-
-.dropdowns select {
-    border: none;
+.dropdown-container select {
+    font-family: Roboto;
+    height: 35px;
+    width: 100%;
     background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
+    border: none;
+    padding: 0.5em;
 }
 
-.select-wrapper {
-    margin: 20px;
-}
 
 /* -----------------------------------------------------------------
 Button
 ----------------------------------------------------------------- */
+.submit-section {
+    padding-top: 1em;
+    max-width: 600px;
+    margin: auto;
+}
 
 .submit-button {
     background-color: white;
@@ -292,6 +362,8 @@ Button
     border-radius: 5px;
     border: none;
     padding: 1em 3em;
+    display: flex;
+    align-items: left;
 }
 
 
@@ -299,7 +371,7 @@ Button
 Footer
 ----------------------------------------------------------------- */
 .footer-sec {
-    height: 150px;
+    height: auto;
     text-align: center;
     font-family: Roboto;
     color: white;
@@ -307,12 +379,9 @@ Footer
 }
 
 .footer-sec p {
+    padding: 2em;
     margin: 0;
 }
-
-
-
-
 
 
 
@@ -324,23 +393,54 @@ typebox forms should be one on top of the other
 checkboxes should also be one on top of the other
 */
 @media only screen and (max-width: 768px) {
-    nav ul {
-        display: block;
+    /* -----------------------------------------------------------------
+Navigation Bar 
+----------------------------------------------------------------- */
+
+    section {
+        align-items: center;
     }
 
-    .burger {
+    nav ul {
         display: none;
     }
 
-    /*update section sizes*/
-    .featured-flavors-sec {
-        height: 800px;
+    .burger {
+        display: contents;
     }
 
-    .locations-section {
-        height: 2500px;
+    .burger img {
+        width: 50px;
+        margin-top: 1.25em;
     }
 
+    /* -----------------------------------------------------------------
+Ice Cream Dreams Section
+- make the image appear on top of the text
+----------------------------------------------------------------- */
+
+    .ice-cream-dreams-sec img {
+        height: 150px;
+        margin: 1em;
+    }
+
+    .logo-and-text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .logo-and-text h1 {
+        font-size: 80px;
+        white-space: nowrap;
+    }
+
+    /* -----------------------------------------------------------------
+MAKE GRID AND STACK
+----------------------------------------------------------------- */
+
+    /*make the flavors go to a 4x4 grid*/
     .flavor-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -348,9 +448,23 @@ checkboxes should also be one on top of the other
 
     /*make the location cards stack on top of one anotehr*/
     .locations-container {
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+
+    /*make the forms appear as columns*/
+    .typeResponses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dropdowns {
+        grid-template-columns: repeat(1, 1fr);
     }
 
 
